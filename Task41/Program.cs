@@ -18,7 +18,18 @@ int [] Fillarray (int number)
     return array;
 }
 
-int [] arr = Fillarray(m);
+
+void PrintArray(int[] array)
+{
+    Console.Write("[");
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (i < array.Length - 1) Console.Write($"{array[i]}, ");
+        else Console.Write($"{array[i]}");
+    }
+    Console.Write("]");
+}
+
 
 int CountPositivEl (int[] array)
 {
@@ -34,7 +45,11 @@ int CountPositivEl (int[] array)
     return count;
 }
 
+int [] arr = Fillarray(m);
+PrintArray(arr);
+
 int c = CountPositivEl (arr);
+
 Console.WriteLine($"Количество чисел больше 0 -> {c}");
 
 
